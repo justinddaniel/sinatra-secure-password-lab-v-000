@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
     if logged_in?
       @user = User.find(session[:user_id])
       erb :account
-    else 
+    else
       redirect "/login"
     end
   end
